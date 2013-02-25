@@ -21,3 +21,7 @@ Then /^I should see "(.*?)" as the (\d+)(st|nd|rd) game with "(.*?)" percent com
   page.should have_css(".games .game:nth-child(#{arg2}) h2", :text => arg1)
   page.should have_css(".games .game:nth-child(#{arg2}) .completeness", :text => arg4)
 end
+
+Then /^I should not see "(.*?)"$/ do |arg1|
+  page.should_not have_content(arg1)
+end

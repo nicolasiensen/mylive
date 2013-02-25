@@ -14,3 +14,4 @@ Feature: view my games ordered by completeness
     Then I should see "Battlefield 3" as the 1st game with "48" percent completed
     And I should see "FIFA 13" as the 2nd game with "31" percent completed
     And I should see "Burnout Paradise" as the 3rd game with "21" percent completed
+    And I should not see "No game found"
