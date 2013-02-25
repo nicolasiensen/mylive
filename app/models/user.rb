@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :games
 
   def completeness_of game
+    return 0 if game.achievements.empty?
     ((self.achievements.where(:game_id => game.id).count.to_f/game.achievements.count.to_f)*100).round
   end
 
