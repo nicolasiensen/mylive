@@ -7,6 +7,9 @@ gem 'rails', '3.2.11'
 
 gem 'pg'
 gem 'xbox-live'
+gem 'inherited_resources'
+gem 'machinist'
+gem 'slim'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +26,7 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
 end
