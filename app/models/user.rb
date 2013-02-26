@@ -13,4 +13,22 @@ class User < ActiveRecord::Base
       self.games << Game.find_or_create_by_uid(game["Id"], :uid => game["Id"], :title => game["Title"], :image => game["LargeBoxArt"])
     end
   end
+
+  def update_achievements
+    self.games.each do |game|
+      XboxLive.achievements(self.gamertag, game.uid)["Data"]["Achievements"].each do |achievement|
+        a = Achievement.find_or_create_by_uid_and_game_id(
+          achievement["Id"], 
+          game.id, 
+          :uid => achievement["Id"], 
+          :game_id => game.id, 
+          :title => achievement["Title"], 
+          :description => achievement["Description"],
+          :score => achievement["GamerScore"],
+          :secret => achievement["IsSecret"] == "yes" ? true : false
+        )
+        self.achievements << a if achievement["Unlocked"] == "yes"
+      end
+    end
+  end
 end
