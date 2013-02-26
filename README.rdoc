@@ -1,5 +1,6 @@
 {<img src="https://codeclimate.com/github/nicolasiensen/mylive.png" />}[https://codeclimate.com/github/nicolasiensen/mylive]
 {<img src="https://travis-ci.org/nicolasiensen/mylive.png?branch=master" alt="Build Status" />}[https://travis-ci.org/nicolasiensen/mylive]
+{<img src="https://gemnasium.com/nicolasiensen/mylive.png" alt="Dependency Status" />}[https://gemnasium.com/nicolasiensen/mylive]
 {<img src="https://badge.fury.io/rb/xbox-live.png" alt="Gem Version" />}[http://badge.fury.io/rb/xbox-live]
 
 == Welcome to Rails
