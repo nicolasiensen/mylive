@@ -1,4 +1,5 @@
 {<img src="https://codeclimate.com/github/nicolasiensen/mylive.png" />}[https://codeclimate.com/github/nicolasiensen/mylive]
+{<img src="https://travis-ci.org/nicolasiensen/mylive.png?branch=master" alt="Build Status" />}[https://travis-ci.org/nicolasiensen/mylive]
 
 == Welcome to Rails
 
