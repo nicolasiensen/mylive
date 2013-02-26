@@ -1,3 +1,6 @@
-- if @user.games.empty?
-  .empty No game found
-.games= render Game.by_completeness(@user)
+section.container
+  section.row
+    - if @user.games.empty?
+      .empty No game found
+    .games
+      = render Game.by_completeness(@user)

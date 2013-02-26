@@ -4,4 +4,56 @@
   Import this file using the following HTML or equivalent:
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
+$columnal-grid-width: 960px !default
+
+// http://colorschemedesigner.com/#4h42vamqUdrXu
+$purple: #746993
+$red: #BC7F95
+$green: #A2C183
+$yellow: #D6CC91
+
 @import compass/reset
+@import columnal/grid
+
+section.container
+  +grid-container
+
+section.row
+  +grid-row
+
+body
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif
+  background: #f5f5f5
+  padding-top: 1em
+  padding-bottom: 1em
+
+h2
+  font-family: 'Changa One', cursive
+  font-size: 3em
+  color: #282B2A
+
+img
+  margin: 5px
+  +box-shadow($green 4px 0 0, gray -2px 0 4px, gray 2px 0 4px)
+
+body.users.show
+  .games
+    +grid(8)
+    +grid-prefix(2)
+    .game
+      padding-bottom: 2em
+      margin-bottom: 2em
+      border-bottom: 1px dashed #282B2A
+      +grid-subcolumn(8, 8)
+      &:last-child
+        padding-bottom: 0
+        margin-bottom: 0
+        border-bottom: 0
+      .game_image
+        +grid-subcolumn(8, 2)
+      .game_infor
+        +grid-subcolumn(8, 6)
+        +last
+      .completeness
+        font-size: 7em
+        color: $green
