@@ -1,5 +1,5 @@
 .game
-  .game_image= image_tag game.image
-  .game_info
-    h2= game.title
-    .completeness #{@user.completeness_of(game)}%
+  h2= game.title
+  .game_image
+    = image_tag game.image
+    span.game_completeness #{@user.completeness_of(game)}%

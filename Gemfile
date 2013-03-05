@@ -11,6 +11,7 @@ gem 'inherited_resources'
 gem 'machinist'
 gem 'slim'
 gem "compass-columnal-plugin"
+gem 'launchy'
 
 # Gems used only for assets and not required
 # in production environments by default.

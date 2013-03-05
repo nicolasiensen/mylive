@@ -23,37 +23,49 @@ section.row
 
 body
   font-family: Lucida Sans Unicode, Lucida Grande, sans-serif
-  background: #f5f5f5
+  background: url("/assets/retina_wood.png")
   padding-top: 1em
   padding-bottom: 1em
 
-h2
+h1
   font-family: 'Changa One', cursive
   font-size: 3em
   color: #282B2A
 
 img
-  margin: 5px
-  +box-shadow($green 4px 0 0, gray -2px 0 4px, gray 2px 0 4px)
+  margin: 0
+  +border-radius(0)
 
 body.users.show
   .games
     +grid(8)
     +grid-prefix(2)
+    h1
+      text-align: center
+      margin-bottom: 40px
     .game
-      padding-bottom: 2em
-      margin-bottom: 2em
-      border-bottom: 1px dashed #282B2A
-      +grid-subcolumn(8, 8)
-      &:last-child
-        padding-bottom: 0
-        margin-bottom: 0
-        border-bottom: 0
-      .game_image
-        +grid-subcolumn(8, 2)
-      .game_infor
-        +grid-subcolumn(8, 6)
+      margin-bottom: 20px
+      +grid-subcolumn(8, 2)
+      &:nth-child(4n+1)
         +last
-      .completeness
-        font-size: 7em
-        color: $green
+      h2
+        display: none
+      .game_image
+        position: relative
+        overflow: hidden
+        display: inline-block
+        +box-shadow(black 0 0 3px)
+        img
+          width: 125px
+          height: 171px
+      span.game_completeness
+        position: absolute
+        left: -20px
+        top: 10px
+        background: $green
+        color: white
+        padding: 2px 0
+        width: 81px
+        text-align: center
+        +box-shadow(gray 0 0 3px)
+        +rotate(-45deg)

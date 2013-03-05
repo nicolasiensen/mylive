@@ -2,5 +2,7 @@ section.container
   section.row
     - if @user.games.empty?
       .empty No game found
-    .games
-      = render Game.by_completeness(@user)
+    - else
+      .games
+        h1 #{@user.gamertag}'s games
+        = render Game.by_completeness(@user)

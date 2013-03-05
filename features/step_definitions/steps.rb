@@ -18,8 +18,8 @@ Given /^this user completed "(.*?)" achievements out of "(.*?)" of "(.*?)"$/ do 
 end
 
 Then /^I should see "(.*?)" as the (\d+)(st|nd|rd) game with "(.*?)" percent completed$/ do |arg1, arg2, arg3, arg4|
-  page.should have_css(".games .game:nth-child(#{arg2}) h2", :text => arg1)
-  page.should have_css(".games .game:nth-child(#{arg2}) .completeness", :text => arg4)
+  page.should have_css(".games .game:nth-child(#{arg2.to_i + 1}) h2", :text => arg1)
+  page.should have_css(".games .game:nth-child(#{arg2.to_i + 1}) span.game_completeness", :text => arg4)
 end
 
 Then /^I should not see "(.*?)"$/ do |arg1|
